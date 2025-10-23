@@ -1,0 +1,20 @@
+name: Testing configuration variables
+
+on:
+  workflow_dispatch
+
+
+env:
+  cloud: google-cloud    #use this variable entire workflow
+ 
+
+jobs: 
+   greeting_job:
+      runs-on: ubuntu-latest 
+      env:
+        Greeting: Hello    #use this variable this job only
+      steps:
+        - name: "first configuration variable step"
+          run: echo "$Greeting $First_Name is ussing $cloud! with project ${{ vars.PROJECT_ID }}"  #last variable settings configure
+          env:
+            First_Name: KP...!   # use only this steps

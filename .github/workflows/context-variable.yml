@@ -19,4 +19,3 @@ jobs:
             echo "Repository Name : ${{ github.repositroy}}"
             echo "workflow Name: ${{ github.workflow }}"
             echo "Triggered by : ${{ github.triggering_actor }}"
-		    
